@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="gallery.css">
+<title>Gallery</title>
+</head>
+<body>
+  <div class="nav">
+			<a href="profile.html"><img id="image" src="img/logo.jpg"></a>
+		</div>
+
+		<ul>
+
+			<li><a href="profile.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a><li>
+			<li><a href="">Contact</a></li>
+			<li><a href="">About</a></li>
+  
+		</ul> 
+    <br><br><br>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 10</div>
+    <center><img src="img/a1.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 10</div>
+    <center><img src="img/a2.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 10</div>
+    <center><img src="img/a3.jpg" style="width:50%; height:60%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 10</div>
+    <center><img src="img/a4.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 10</div>
+    <center><img src="img/a5.jpg" style="width:50%; height:60%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 10</div>
+    <center><img src="img/a6.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 10</div>
+    <center><img src="img/a7.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 10</div>
+    <center><img src="img/a8.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 10</div>
+    <center><img src="img/a9.jpg" style="width:50%; height:60%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 10</div>
+    <center><img src="img/a10.jpg" style="width:50%; height:60%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/a1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Services and Events">
+    </div>  
+    <div class="column">
+      <img class="demo cursor" src="img/a6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Services and Events">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/a10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Services and Events">
+    </div>  
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br><br><br>
+<center>
+<div class="card3">
+  <h3> <b>Mt. Alimono Trucking Corporation</b>
+  is a trucking company which has a goal to provide a complete on time delivery of products to end users in order 
+  to benchmark a high quality and dependable trucking services that attend customer needs, commit to deliver, teach their people, initiate solutions, 
+  volunteer to a community work and engage each other. </h3>
+</div>
+  
+ <br><br>
+
+ <a href="profile.html" class="link">BACK</a>
+ </center> 
+  <br><br>
+
+</body>
+</html>
